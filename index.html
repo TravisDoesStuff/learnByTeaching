@@ -59,17 +59,81 @@
       <time datetime="2021-04-18">April 18th, 2021</time>
       <h3>Questions:</h3>
       <ul>
-        <li>What are the <code>::before</code> and <code>::after</code> pseudo-elements in CSS?</li>
-        <li>What are the fundamentals of HTTP? Such as the header.</li>
-        <li>What is the DOM?</li>
-        <li>Look through this: <a href="https://websitesetup.org/html5-cheat-sheet/">HTML5 Cheat Sheet</a></li>
+        <li>What are the <code>::before</code> and <code>::after</code> pseudo-elements in CSS?
+          <ul>
+            <li>First remember pseudo-<strong>classes</strong> pertain to a certain state of a element such as hover, visited, or focus. </li>
+            <li>Pseudo-<strong>elements</strong> are used to style a specific <strong>part</strong> of an element.
+              <ul>
+                <li>element::before adds content before each iteration of said element</li>
+                <li>element::after does the same thing but after the element</li>
+                <li>use 'content: words' to add content</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>What are the fundamentals of HTTP? Such as the header.
+          <ul>
+            <li>HTTP stands for HyperText Transfer Protocol</li>
+            <li>Request methods:
+              <ul>
+                <li>GET: retrieve information from server, parameters visible in URL
+                <li>POST: sends information to server</li>
+                <li>PUT: same as POST but uses the same resource, for example when the browser refreshes, POST methods ask about resending the data</li>
+                <li>DELETE: removes the specific resource, infrequently used</li>
+                <li>HEAD: same as GET but without a response body, infrequently used</li>
+              </ul>
+            </li>
+            <li>Headers are simply additional data sent in the request, often used for caching , authentication, and cookies.</li>
+            <li>Status Codes:
+              <ul>
+                <li>1xx: Information</li>
+                <li>2xx: Success</li>
+                <li>3xx: Redirects</li>
+                <li>4xx: Client error</li>
+                <li>5xx: Server error</li>
+              </ul>
+            </li>
+            <li>cURL is a HTTP command line tool.</li>
+          </ul>
+        </li>
+        <li>What is the DOM?
+          <ul>
+            <li>Before reading: It is the representation of all content on the page. Not quite.</li>
+            <li>After reading: DOM is the <strong>Document Object Model</strong>.</li>
+            <li>An interface between the browser and the HTML/XML. Represented as a hierarchy tree. Allows JS to manipulate the structure and style of the content.</li>
+            <li>Very important for Single Page Applications (SPA).</li>
+            <li><a href='https://www.freecodecamp.org/news/whats-the-document-object-model-and-why-you-should-know-how-to-use-it-1a2d0bc5429d/' target='_blank'>freeCodeCamp: What’s the Document Object Model, and why you should know how to use it.</a></li>
+            <ul>
+              <li>Manipulate the DOM with events such as <code>myEleName.addEventListener('click', function(event){}, false)</code></li>
+            </ul>
+            <li>See structure even in this page</li>
+            <ul>
+              <li>&lt;html&gt; &#8594; &lt;body&gt; &#8594; &lt;div&gt; &#8594; &lt;p&gt;</li>
+            </ul>
+            <li><a href='https://www.javascripttutorial.net/javascript-dom/document-object-model-in-javascript/' target='_blank'>JS Tutorial: Document Object Model in JavaScript</a></li>
+          </ul>
+        </li>
+        <li>Look through this: <a href="https://websitesetup.org/html5-cheat-sheet/" target='_blank'>HTML5 Cheat Sheet</a></li>
         <li>This list needs to be managable while I work full time.</li>
         <li>React Denver Meetup, career discussion</li>
+      </ul>
+      <h3>Discoveries</h3>
+      <ul>
+        <li>JS: <code>document.querySelector()</code> is used to specify CSS selector such as "#id" or ".class"</li>
+        <li><code>myEleName.childNodes()</code> returns all children of the particular DOM element</li>
+        <li><code>myEleName.firstChild()</code> returns first child of element <sub>how does it arrange child elements at runtime?</sub></li>
       </ul>
     </div>
 
     Thoughts:
-    end to end testing? unit testing? long term mental health effects from impossible deadlines? do I really need to leetcode?
-    how much am I going to end up reinventing the wheel?
+    end to end testing? unit testing?
+    long term mental health effects from impossible deadlines + covid?
+    do I really need to leetcode?
+    how much am I going to end up reinventing the wheel on this page?
+    what is a callback?
+    what is a JS dispatch?
+    what is CORS?
+    what is a proxy?
+    what is a URI?
   </body>
 </html>
