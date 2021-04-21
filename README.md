@@ -1,4 +1,4 @@
-# The Developer
+# The Eccentric Developer
 I've been a web-based software developer professionally for 6 years, working with HTML5, CSS3, JavaScript, PHP, and MySQL. Along with that I also been working with additional frameworks and libraries such as Zend, React, Lumen, and Vue on the side.
 
 Some of my favorite tasks on the job have been researching UI libraries and building interfaces for customer-facing applications -- which include Material UI, Bootstrap, and Semantic UI; all which to provide a positive experience to users of the applications.
