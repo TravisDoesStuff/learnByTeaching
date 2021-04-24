@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>My Learnings</title>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -70,9 +71,9 @@
                 <li>First remember pseudo-<strong>classes</strong> pertain to a certain state of a element such as hover, visited, or focus. </li>
                 <li>Pseudo-<strong>elements</strong> are used to style a specific <strong>part</strong> of an element.
                   <ul>
-                    <li>element::before adds content before the content of the element</li>
-                    <li>element::after does the same thing but after the element's content</li>
-                    <li>use 'content: words' to add content</li>
+                    <li><code>element::before</code> adds content before the content of the element</li>
+                    <li><code>element::after</code> does the same thing but after the element's content</li>
+                    <li>use <code>content: words</code> to add content</li>
                   </ul>
                 </li>
               </ul>
@@ -217,10 +218,32 @@
                     <li><code>&lt;aside&gt;</code> defines content aside from content.</li>
                   </ul>
                 </li>
-                <li><code>&lt;blockquote cite="wikipedia.org"&gt;</code> can be used for quoting including a citation.</li>
+                <li><code>&lt;blockquote&gt;</code> can be used for quoting including a citation.
+                    <blockquote>
+                      HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.<br>
+                      <cite>wikipedia.org</cite>
+                    </blockquote>
+                </li>
                 <li>Empty elements are elements with no content, such as <code>&lt;br&gt;</code>, also known as void elements.</li>
-                <li><code>&lt;progress&gt;</code> have a defined max, while <code>&lt;meter&gt;</code> has a maximum of 1 — or 100%</li>
-                <li><code>&lt;datalist&gt;</code> is a textbox with autocomplete and defined dropdown list.</li>
+                <li><code>&lt;progress&gt;</code> have a defined max, while <code>&lt;meter&gt;</code> has a maximum of 1 — or 100%<br>
+                  <label for='prgressBarExample'>Progress:</label>
+                  <progress name='progressBarExample' value='4' max='5'>80%</progress>
+                  <br>
+                  <label for='meterBarExample'>Usage:</label>
+                  <meter name='meterBarExample' value='0.35'>35%</meter>
+                  <label for='meterBarExample2'>Min-Max:</label>
+                  <meter name='meterBarExample2' min='0' max='1000' value='850' high='800'>850</meter>
+                </li>
+                <li><code>&lt;datalist&gt;</code> is a textbox with autocomplete and defined dropdown list.<br>
+                  <label for='doggos'>Select a Dog:</label>
+                  <input list='doggo-breeds' id='doggos' name='doggos' />
+                  <datalist id='doggo-breeds'>
+                    <option value='Golden Retreiver' />
+                    <option value='Dalmatian' />
+                    <option value='Poodle' />
+                    <option value='Chihuahua' />
+                  </datalist>
+                </li>
                 <li><code>&lt;!DOCTYPE html&gt;</code> is <strong>required</strong> for HTML5 to work.</li>
                 <li><code>&lt;figure&gt;</code> is used for self-contained content such as images with captions, and code snippets. It is used for semantics.</li>
                 <li>Image maps allow for parts of an image to be individually clickable.</li>
@@ -266,11 +289,6 @@
                         <li><em>Experimental</em></li>
                       </ul>
                     </li>
-                  </ul>
-                </li>
-                <li>CSS4? What?
-                  <ul>
-                    <li>It's not well defined, just a bit of marketing for features CSS3 already has but is being practiced in 2019+ web development/design.</li>
                   </ul>
                 </li>
               </ul>
