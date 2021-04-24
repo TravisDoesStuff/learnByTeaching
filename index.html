@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="index.css">
@@ -186,7 +187,7 @@
               <dt>Ferret</dt>
               <dd>the domesticated form of the European polecat</dd>
             </dl>
-            <li><ins>Semantic HTML</ins> is the definition of styling using strong, italics, underline, etc.</li>
+            <li><ins>Semantic HTML</ins> is the definition of styling and layout. More descriptive than divs.</li>
             <li>Self-teaching I'm already finding a bit lonely since my close friends are not in tech. And an ongoing pandemic puts a damper on networking.
               <ul>
                 <li><a href='https://towardsdatascience.com/https-medium-com-nityeshagarwal-difficulties-with-self-learning-and-3-systems-to-solve-them-a14f4c9a64c6'>Medium</a></li>
@@ -206,25 +207,243 @@
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
-            <li>CSS Flexbox vs Grid, grid is apparently new.</li>
-            <li>Check into some addtional HTML interview questions.</li>
+            <li>Check into some addtional HTML interview questions. <a href='https://static.javatpoint.com/htmlpages/images/html-layouts.png' target='_blank'>JavaTPoint</a>
+              <ul>
+                <li>Some additional semantic HTML tags, probably for SEO.
+                  <ul>
+                    <li><code>&lt;nav&gt;</code> container for navigation links.</li>
+                    <li><code>&lt;section&gt;</code> defines section in a document.</li>
+                    <li><code>&lt;article&gt;</code> defines independent, self-contained, article.</li>
+                    <li><code>&lt;aside&gt;</code> defines content aside from content.</li>
+                  </ul>
+                </li>
+                <li><code>&lt;blockquote cite="wikipedia.org"&gt;</code> can be used for quoting including a citation.</li>
+                <li>Empty elements are elements with no content, such as <code>&lt;br&gt;</code>, also known as void elements.</li>
+                <li><code>&lt;progress&gt;</code> have a defined max, while <code>&lt;meter&gt;</code> has a maximum of 1 — or 100%</li>
+                <li><code>&lt;datalist&gt;</code> is a textbox with autocomplete and defined dropdown list.</li>
+                <li><code>&lt;!DOCTYPE html&gt;</code> is <strong>required</strong> for HTML5 to work.</li>
+                <li><code>&lt;figure&gt;</code> is used for self-contained content such as images with captions, and code snippets. It is used for semantics.</li>
+                <li>Image maps allow for parts of an image to be individually clickable.</li>
+              </ul>
+            </li>
+            <li>Look through CSS interview questions?
+              <ul>
+                <li>Positions: <a href='https://css-tricks.com/almanac/properties/p/position/' target='_blank'>CSS-Tricks: position</a>
+                  <ul>
+                    <li>Static
+                      <ul>
+                        <li>Default</li>
+                        <li>Follows document flow.</li>
+                        <li>Not affected by top, left, bottom, right, and z-index properties.</li>
+                      </ul>
+                    </li>
+                    <li>Relative
+                      <ul>
+                        <li>Follows document flow.</li>
+                        <li>Positioned relative to itself on top, right, bottom, and left.</li>
+                        <li>Usage is discouraged for positioning.</li>
+                      </ul>
+                    </li>
+                    <li>Fixed
+                      <ul>
+                        <li>Does not follow document flow.</li>
+                        <li>Ignores element ancestry.</li>
+                        <li>Fixed to screen position, even when scrolling.</li>
+                      </ul>
+                    </li>
+                    <li>Absolute
+                      <ul>
+                        <li>Does not follow document flow.</li>
+                        <li>Placed relative to closest positioned parent container.</li>
+                        <li>Fits to content.</li>
+                        <li>If parent element is <code>position: relative;</code>, child element with <code>position: absolute;</code> will be set to parent.</li>
+                      </ul>
+                    </li>
+                    <li>Sticky
+                      <ul>
+                        <li>Follows user's scroll position</li>
+                        <li>Combines relative and fixed positioning</li>
+                        <li><em>Experimental</em></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>CSS4? What?
+                  <ul>
+                    <li>It's not well defined, just a bit of marketing for features CSS3 already has but is being practiced in 2019+ web development/design.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='entry_discoveries'>
+          <h3>Discoveries</h3>
+          <ul>
+            <li><a href='https://www.youtube.com/watch?v=FKTxC9pl-WM' target='_blank'>Making Badass Developers by Serious Pony</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-04-23">April 23rd, 2021</time></h2>
+        <div class='entry_questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>More CSS interview questions:
+              <ul>
+                <li>Displays, there are many but the most important: <a href='https://css-tricks.com/almanac/properties/d/display/' target='_blank'>CSS-Tricks: display</a>
+                  <ul>
+                    <li>inline
+                      <ul>
+                        <li>default</li>
+                        <li>sits within content</li>
+                        <li>padding and margin is allowed</li>
+                      </ul>
+                    </li>
+                    <li>block
+                      <ul>
+                        <li>breaks past inline</li>
+                        <li>by default spans entire element</li>
+                      </ul>
+                    </li>
+                    <li>inline-block
+                      <ul>
+                        <li>similar to inline but allows width and height</li>
+                      </ul>
+                    </li>
+                    <li>flex
+                      <ul>
+                        <li>See Flexbox below</li>
+                      </ul>
+                    </li>
+                    <li>grid
+                      <ul>
+                        <li>See Grid below</li>
+                      </ul>
+                    </li>
+                    <li>none
+                      <ul>
+                        <li>Hides element</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>CSS Flexbox vs Grid, grid is apparently new.
+                  <ul>
+                    <li>Grid <a href='https://css-tricks.com/snippets/css/complete-guide-grid/' target='_blank'>CSS-Tricks A Complete Guide to Grid</a>
+                      <ul>
+                        <li>Is not new but is trending.</li>
+                        <li>Where Flexbox is one-dimensional only caring about the container and all of it's content, Grid is two dimensional working with rows and columns.</li>
+                        <li>Works VERY well with Flexbox as you can put a flex container in a grid cell.</li>
+                        <li>Supports variable sizes.</li>
+                        <li></li>
+                      </ul>
+                    </li>
+                    <li>Flex: <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/' target='_blank'>CSS-Tricks: A Complete Guide to Flexbox</a>
+                      <ul>
+                        <li>Allows flexability of container content when content is dynamic or unknown size.</li>
+                        <li>Simply set parent element, or container, to <code>display: flex;</code></li>
+                        <li>Very useful for SPAs</li>
+                        <li>Properties
+                          <ul>
+                            <li>Children <code>order: x;</code> property sets order of appearance in container.</li>
+                            <li><code>flex-direction</code> direction axis of content</li>
+                            <li><code>flex-grow</code> resizes content components to container</li>
+                            <li><code>flex-wrap</code>
+                              <ul>
+                                <li><code>nowrap</code> default fit everything to one line</li>
+                                <li><code>wrap</code> wrap content top to bottom</li>
+                                <li><code>wrap-reverse</code> wrap content bottom to top</li>
+                              </ul>
+                            </li>
+                            <li><code>justify-content</code> distributes whitespace between components horizontally</li>
+                            <li><code>align-items</code> distributes content with space top or bottom</li>
+                            <li><code>align-content</code> relevant to fixed container sizes, space around all inner content</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>property <code>float</code> by default has content wrap around it</li>
+                    <li>Units:
+                      <ul>
+                        <li>px: absolute pixels, less useful for large screen sizes</li>
+                        <li>em: relative to font size</li>
+                        <li>rem: relative to root element</li>
+                        <li>%: relative percentage to parent element</li>
+                      </ul>
+                    </li>
+                    <li>Preprocessors:
+                      <ul>
+
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='entry_discoveries'>
+          <h3>Discoveries</h3>
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-04-24">April 24th, 2021</time></h2>
+        <div class='entry_questions'>
+          <h3>Questions</h3>
+          <ul>
             <li>Look into potential open source projects, even if I don't contribute anything.
               <ul>
                 <li>It doesn't have to be code related either.</li>
               </ul>
             </li>
-            <li>CSS4? What?</li>
-            <li>Look through CSS interview questions?</li>
-          </ul>
-          <h3>Discoveries</h3>
-          <ul>
-
           </ul>
         </div>
         <div class='entry_discoveries'>
-
+          <h3>Discoveries</h3>
+          <ul>
+            
+          </ul>
         </div>
       </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-04-25">April 25th, 2021</time></h2>
+        <div class='entry_questions'>
+          <h3>Questions</h3>
+          <ul>
+            
+          </ul>
+        </div>
+        <div class='entry_discoveries'>
+          <h3>Discoveries</h3>
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-04-26">April 26th, 2021</time></h2>
+        <div class='entry_questions'>
+          <h3>Questions</h3>
+          <ul>
+            
+          </ul>
+        </div>
+        <div class='entry_discoveries'>
+          <h3>Discoveries</h3>
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+      
     </div>
 
     Thoughts:
