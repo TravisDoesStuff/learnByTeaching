@@ -391,11 +391,6 @@
                         <li>%: relative percentage to parent element</li>
                       </ul>
                     </li>
-                    <li>Preprocessors:
-                      <ul>
-
-                      </ul>
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -447,15 +442,70 @@
       <div class='journal_day'>
         <h2><time datetime="2021-04-27">April 27th, 2021</time></h2>
         <div class='entry_questions'>
+          <h3>Thoughts</h3>
+          <ul>
+            <li>I do need to practice all that I have been relearning so far. However just practicing theory for the sake of practicing theory isn't going to cut it for me. I might need to create a bunch of small widgets throughout the application to make it more interesting to me. Of course I need to be rid of that mentality often seen in job interviews where you have to build a full-scale application, like a new Facebook, in 1 hour.</li>
+            <li>One way of learning is going through basic material and seeing if I can answer what the topic is before it is demonstrated as seen <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank">here.</a></li>
+          </ul>
           <h3>Questions</h3>
           <ul>
-            
+            <li>CSS Preprocessors:
+              <ul>
+                <li>Sass</li>
+              </ul>
+            </li>
+            <li><code>var</code> is function scoped; <code>let</code> is block scoped {}; generally there is no reason to use <code>var</code> now</li>
+            <li>Asynchronous JavaScript:
+              <ul>
+                <li>What is a callback?
+                  <ul>
+                    <li>A callback is passing in a function in a parameter in another function.</li>
+                    <li>Callback Hell is where you have a long nested chain of callbacks.</li>
+                    <li>Callback example with arrow functions:
+                      <script>
+                        let myFunction = (variable) => {
+                          console.log(`did a ${variable}`);
+                        }
+  
+                        myFunction("thing")
+                      </script>
+                    </li>
+                  </ul>
+                </li>
+                <li>What is a promise?
+                  <ul>
+                    <li>An instantiated object that has a success and failure parameter functions.</li>
+                    <li><code>.then()</code> follows the success path.</li>
+                    <li>.catch()</li>
+                  </ul>
+                </li>
+                <li><del>What is async/await?</del> Woah woah, slow down, there's only so much I can learn at a time. Try not to get too far ahead before I understand prior information.</li>
+                <li>Is there really any reason to use quotes for string literals when we have backticks?
+                  <ul>
+                    <li>Code opinion</li>
+                    <li>Readability, quotes are easier to read if there is no interpolation, or <strong>template strings</strong></li>
+                    <li>Backwards compatabilit, but is becoming less relevent.</li>
+                    <li>Also useful for when double and single quotes are contained in a string.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>What is array mapping?
+              <ul>
+                <li>The array<code>.map()</code> function creates a new array while applying the parameters passed in to each element in the array.</li>
+              </ul>
+            </li>
+            <li>What is a spread operator?</li>
+            <li>What is the advantage of arrow functions in JS?</li>
           </ul>
         </div>
         <div class='entry_discoveries'>
           <h3>Discoveries</h3>
           <ul>
-            
+            <li>console.log() supports CSS</li><script>console.log('%c Red Text', 'color: red; font-size: 30px;');</script>
+            <li>console.table() is useful for displaying object properties</li>
+            <li>console.trace() displays the stack trace of whatever is being called</li>
+            <li>Remember like in C, all strings are arrays so square brackets can read a character.</li>
           </ul>
         </div>
       </div>
