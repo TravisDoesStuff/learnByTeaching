@@ -561,16 +561,73 @@
 
       <div class='journal_day'>
         <h2><time datetime="2021-04-29">April 29th, 2021</time></h2>
+        <div class='entry_thoughts'>
+          <h3>Thoughts</h3>
+          <ul>
+            <li>It might be tricky to study some of the things I learn in practice as I care about the end result.</li>
+            <li>You can ask a carpenter the same thing, it's about knowing the tools and when to use them.</li>
+            <li>I wonder if a surgeon or dentist has so many tools but only relies on a fraction of what is available.</li>
+            <li>I did estimate about two weeks to relearn basic JavaScript, I wonder if my prediction will be accurate.</li>
+          </ul>
+        </div>
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
-            
+            <li>Immediately involved function expression?</li>
           </ul>
         </div>
         <div class='entry_discoveries'>
           <h3>Discoveries</h3>
           <ul>
-            
+            <li>More info: <a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target='_blank'>JavaScript Crash Course For Beginners</a>
+            <li>More arrow function goodness: <code>argument => doSomethingAutoReturned</code></li>
+            <li><strong>Rest operator</strong> <code>myFunction(...arg){}</code> creates an array of all passed in arguments in a function
+              <ul>
+                <li>Example: <code>myFunction(1,2,3); function myFunction(...myArray);</code> is equivalent to <code>myArray = [1,2,3];</code></li>
+              </ul>
+            </li>
+            <li><strong>Spread operator</strong> when invoked within an array, will 'combine' the two together by 'spreading' the smaller array
+              <ul>
+                <li>Example: <code>let smallArray = ['second', third']; let combinedArray = ['first', ...smallArray];</code> becomes <code>['first', 'second', 'third']</code></li>
+              </ul>
+            </li>
+            <li><strong>Object destructuring</strong> 
+              <ul>
+                <li>Syntax: <code>const { myObjectProperty : variableAssigment } = myObject;</code></li>
+                <li>Destructuring can be nested</li>
+                <li>Destructuring can also be used as arguments when invoking a function such as <code>myFunction(myObj); myFunction({objProp1, objProp2}) {}</code></li>
+              </ul>
+            </li>
+            <li><strong>Array destructuring</strong> is very much like object destructuring but you cannot specify which index goes into a variable. Instead they go in order of indexes and assignments.
+              <ul>
+                <li>Empty commas <code>[x, y, , , z]</code> can be used as a workaround.</li>
+              </ul>
+            </li>
+            <li>Backticks string literals support new lines without needing special characters.</li>
+            <li><strong>Object literals</strong> are very much like prototypes in OOP.*
+              <ul>
+                <li><code>let createNewObject = (arg1, arg2, arg3) => ({prop1, prop2, prop3}); let myObj = createNewObject(arg1, arg2, arg3);</code></li>
+              </ul>
+            </li>
+            <li>Objects can have functions of course.</li>
+            <li>Classes support constructors, getters, and setters in ES6.
+              <ul>
+                <li><code>_variables</code> with underscores define a "private" variable.</li>
+                <li><code>get myGetterFunction() {}</code> does not require parenthesis when invoked <code>let myValue = myObject.myGetterFunction</code></li>
+                <li><code>set mySetterFunction() {}</code> does not require parenthesis when invoked <code>myObject.mySetterFunction = myValue</code></li>
+              </ul>
+            </li>
+            <li><code>import { myFunctionName } from "./external_js_file"</code> to use a function in another file exported by <code>export const myFunctionName()</code>
+              <ul>
+                <li>file looks for the magical words <code>export</code> to make it valid for importing</li>
+                <li>Export is also possible by <code>export { myFunctionName, myVariableName }</code> on its own line</li>
+                <li>You may import all like <code>import * as myImportedObjectName from "./external_js_file";</code></li>
+                <li><code>export default ...</code> serves as a fallback if an import fails</li>
+                <li><code>import myFunctionName from './external_js_file'</code> without the curly brackets serves as the default import</li>
+              </ul>
+            </li>
+            <li><code>myArray.filter()</code> creates a new array based on a condition</li>
+            <li><code>myArray.map()</code> creates a new array without mutating the original array</li>
           </ul>
         </div>
       </div>
