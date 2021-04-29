@@ -501,21 +501,25 @@
         <div class='entry_thoughts'>
           <ul>
             <li>I think I'll make a simple game soon.</li>
+            <li>Just like any creative artstyle, every programmer has their own style that others may recognize. It happened at work a few times where co-workers can recognize how I code.</li>
+            <li>Will also soon go through old project widgets to recall a few things and comment.</li>
           </ul>
         </div>
         <div class='entry_discoveries'>
           <h3>Discoveries</h3>
           <ul>
             <li>Switch cases have a bit of a cascade effect without the break statement.
-              <code>
-                <p>switch(val){</p>
-                  <p>&ensp;case 1:</p>
-                  <p>&ensp;case 2:</p>
-                  <p>&ensp;case 3:</p>
-                  <p>&emsp;console.log("1, 2, and 3 all lead here");</p>
-                  <p>&emsp;break;</p>
-                <p>}</p>
-              </code>
+              <div>
+                <code>
+                  switch(val){<br>
+                    &ensp;case 1:<br>
+                    &ensp;case 2:<br>
+                    &ensp;case 3:<br>
+                    &emsp;&emsp;console.log("1, 2, and 3 all lead here");<br>
+                    &emsp;&emsp;break;<br>
+                  }
+                </code>
+              </div>
             </li>
             <li>JavaScript does not support associative arrays, just arrays with indexes, and objects.
               <ul>
@@ -525,8 +529,34 @@
               </ul>
             </li>
             <li><code>myObj.hasOwnProperty(property)</code> will check if object has specified property</li>
+            <li><code>while()</code> loops only run when condition is true, think of the middle condition of a <code>for()</code> loop</li>
+            <li><code>do{} while()</code> loops will <ins>always</ins> perform the block and then check the condition at the end before continuing</li>
+            <li><code>Math.random()</code> by itself returns a number between 0 and 1, but cannot be 1</li>
+            <li><code>parseInt()</code> returns an integer if possible, <code>NaN</code> if not possible
+              <ul>
+                <li>second argument is base-number such as 2 for binary</li>
+              </ul>
+            </li>
+            <li><strong>Ternary operator</strong> is a conditional statement formatted as <code>condition ? run-if-true : run-if-false;</code> you already knew this but don't know the textbook definition
+              <ul>
+                <li>Ternary operators can be nested!</li>
+                <li>Example:
+                  <ul>
+                    <li><code>let numPositive = num > 0 ? "yes" : num < 0 ? "no" : "is zero";</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Adding <code>"use strict";</code> to JS will help catch unsafe actions</li>
+            <li><code>let</code> can be redeclared within a child block such as if(){}, for(){}, etc</li>
+            <li>Remember that <code>const VARIABLENAME = 'whatever';</code> should to be in ALLCAPS</li>
+            <li>Arrays or objects declared with <code>const</code> can still have it's elements/properties mutated.</li>
+            <li><code>Object.freeze(myObject)</code> will prevent array/object mutations</li>
+            <li><strong>Anomynous functions</strong> are functions that do not have a name, often seen in arrow functions</li>
+            <li>Curly braces are not necessary for arrow functions, such as <code>let addTwoNumbers = (a, b) => return a+b</code></li>
           </ul>
         </div>
+        <em>I need a night to sleep on this, gotta learn at my own pace right?</em>
       </div>
 
       <div class='journal_day'>
