@@ -573,7 +573,11 @@
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
-            <li>Immediately involved function expression?</li>
+            <li>What is a Immediately Involved Function Expression?
+              <ul>
+                <li>Also known as a <strong>IIFE</strong>, a function is wrapped in parenthesis to execute as soon as it is invoked.</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div class='entry_discoveries'>
@@ -626,10 +630,12 @@
                 <li><code>import myFunctionName from './external_js_file'</code> without the curly brackets serves as the default import</li>
               </ul>
             </li>
-            <li><code>myArray.filter()</code> creates a new array based on a condition</li>
-            <li><code>myArray.map()</code> creates a new array without mutating the original array</li>
+            <li><code>myArray.filter()</code> iterates through each element of myArray, and adds to a new array if they pass the condition expressed in the argument; must return true or false <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">MDN: Array.prototype.filter()</a></li>
+            <li><code>myArray.map()</code> passes in each element of the array into the function (or arrow function) contained in the map() function argument, as the inner function's argument, without mutating the original array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">MDN: Array.prototype.map()</a></li>
+            <li>Yo, the function arguments are <strong>callbacks</strong>. Do you get it now? <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank">MDN: Callback function</a></li>
           </ul>
         </div>
+        <em>I've created a repo to build a <code>&lt;codeblock&gt;</code> block for HTML. The above examples are ridiculous on one line. There's really a lot of nice structuring I could do to put my UX interest to work.</em>
       </div>
 
       <div class='journal_day'>
@@ -637,7 +643,7 @@
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
-            
+            <li>All* things DOM related using JS:</li>
           </ul>
         </div>
         <div class='entry_discoveries'>
@@ -650,6 +656,11 @@
 
       <div class='journal_day'>
         <h2>Weekend of <time datetime="2021-05-01">May 1st, 2021</time> through <time datetime="2021-05-02">May 2nd, 2021</time></h2>
+        <div class='entry_thoughts'>
+          <ul>
+            <li><em>Maybe I should have questions of the week. I have been answering the below slowly at least.</em></li>
+          </ul>
+        </div>
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
@@ -682,6 +693,7 @@
                     <li>Also useful for when double and single quotes are contained in a string.</li>
                   </ul>
                 </li>
+                <li>What is a JS dispatch?</li>
               </ul>
             </li>
             <li>What is array mapping?
@@ -709,12 +721,25 @@
       </div>
     </div>
 
-    Thoughts:
-    end to end testing? unit testing?
-    long term mental health effects from impossible deadlines + covid?
-    do I really need to leetcode?
-    how much am I going to end up reinventing the wheel on this page?
-    what is a JS dispatch?
-    I really have reverted to jr level developer.
+    <div>
+      <h6>Thoughts:</h6>
+      <dl>
+        <dt>What are the long term mental health effects from impossible deadlines + covid?</dt>
+        <dd>I have support from people who genuinely care about me ;_;</dd>
+
+        <dt>Do I really need to leetcode?</dt>
+        <dd>Maybe.</dd>
+
+        <dt>How much am I going to end up reinventing the wheel on this page?</dt>
+        <dd>In a way that looks nice and gives a nice experience.</dd>
+
+        <dt>I really have reverted to jr level developer.</dt>
+        <dd>And I'm relearning at a breakneck speed.</dd>
+      </dl>
+    </div>
+    <div>
+      <h6>Roadmap:</h6>
+      React, Vue, testing methodologies, cs theory/algorithms
+    </div>
   </body>
 </html>
