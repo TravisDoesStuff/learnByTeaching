@@ -3,6 +3,7 @@
   <head>
     <title>My Learnings</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../html_codeblock/codeblock.css">
   </head>
   <body>
     <h1>Journal Begins Here</h1>
@@ -509,17 +510,15 @@
           <h3>Discoveries</h3>
           <ul>
             <li>Switch cases have a bit of a cascade effect without the break statement.
-              <div>
-                <code>
-                  switch(val){<br>
-                    &ensp;case 1:<br>
-                    &ensp;case 2:<br>
-                    &ensp;case 3:<br>
-                    &emsp;&emsp;console.log("1, 2, and 3 all lead here");<br>
-                    &emsp;&emsp;break;<br>
-                  }
-                </code>
-              </div>
+              <codeblock>
+                switch(val){
+                  &ensp;case 1:
+                  &ensp;case 2:
+                  &ensp;case 3:
+                  &emsp;&emsp;console.log("1, 2, and 3 all lead here");
+                  &emsp;&emsp;break;
+                }
+              </codeblock>
             </li>
             <li>JavaScript does not support associative arrays, just arrays with indexes, and objects.
               <ul>
@@ -560,163 +559,271 @@
       </div>
 
       <div class='journal_day'>
-        <h2><time datetime="2021-04-29">April 29th, 2021</time></h2>
-        <div class='entry_thoughts'>
+        <h2><time datetime="2021-04-29">Thursday - April 29th, 2021</time></h2>
+        <div class='entry_section'>
           <h3>Thoughts</h3>
-          <ul>
-            <li>It might be tricky to study some of the things I learn in practice as I care about the end result.</li>
-            <li>You can ask a carpenter the same thing, it's about knowing the tools and when to use them.</li>
-            <li>I wonder if a surgeon or dentist has so many tools but only relies on a fraction of what is available.</li>
-            <li>I did estimate about two weeks to relearn basic JavaScript, I wonder if my prediction will be accurate.</li>
-          </ul>
+          <div class='entries thoughts'>
+            <p>It might be tricky to study some of the things I learn in practice as I care about the end result.</p>
+            <p>You can ask a carpenter the same thing, it's about knowing the tools and when to use them.</p>
+            <p>I wonder if a surgeon or dentist has so many tools but only relies on a fraction of what is available.</p>
+            <p>I did estimate about two weeks to relearn basic JavaScript, I wonder if my prediction will be accurate.</p>
+          </div>
         </div>
-        <div class='entry_questions'>
+        <div class='entry_section'>
           <h3>Questions</h3>
           <ul>
-            <li>What is a Immediately Involved Function Expression?
-              <ul>
-                <li>Also known as a <strong>IIFE</strong>, a function is wrapped in parenthesis to execute as soon as it is invoked.</li>
-              </ul>
-            </li>
+            <li>What is a Immediately Invoked Function Expression?</li>
           </ul>
         </div>
-        <div class='entry_discoveries'>
+        <div class='entry_section discoveries'>
           <h3>Discoveries</h3>
-          <ul>
-            <li>More info: <a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target='_blank'>JavaScript Crash Course For Beginners</a>
-            <li>More arrow function goodness: <code>argument => doSomethingAutoReturned</code></li>
-            <li><strong>Rest operator</strong> <code>myFunction(...arg){}</code> creates an array of all passed in arguments in a function
-              <ul>
-                <li>Example: <code>myFunction(1,2,3); function myFunction(...myArray);</code> is equivalent to <code>myArray = [1,2,3];</code></li>
-              </ul>
-            </li>
-            <li><strong>Spread operator</strong> when invoked within an array, will 'combine' the two together by 'spreading' the smaller array
-              <ul>
-                <li>Example: <code>let smallArray = ['second', third']; let combinedArray = ['first', ...smallArray];</code> becomes <code>['first', 'second', 'third']</code></li>
-              </ul>
-            </li>
-            <li><strong>Object destructuring</strong> 
-              <ul>
-                <li>Syntax: <code>const { myObjectProperty : variableAssigment } = myObject;</code></li>
-                <li>Destructuring can be nested</li>
-                <li>Destructuring can also be used as arguments when invoking a function such as <code>myFunction(myObj); myFunction({objProp1, objProp2}) {}</code></li>
-              </ul>
-            </li>
-            <li><strong>Array destructuring</strong> is very much like object destructuring but you cannot specify which index goes into a variable. Instead they go in order of indexes and assignments.
-              <ul>
-                <li>Empty commas <code>[x, y, , , z]</code> can be used as a workaround.</li>
-              </ul>
-            </li>
-            <li>Backticks string literals support new lines without needing special characters.</li>
-            <li><strong>Object literals</strong> are very much like prototypes in OOP.*
-              <ul>
-                <li><code>let createNewObject = (arg1, arg2, arg3) => ({prop1, prop2, prop3}); let myObj = createNewObject(arg1, arg2, arg3);</code></li>
-              </ul>
-            </li>
-            <li>Objects can have functions of course.</li>
-            <li>Classes support constructors, getters, and setters in ES6.
-              <ul>
-                <li><code>_variables</code> with underscores define a "private" variable.</li>
-                <li><code>get myGetterFunction() {}</code> does not require parenthesis when invoked <code>let myValue = myObject.myGetterFunction</code></li>
-                <li><code>set mySetterFunction() {}</code> does not require parenthesis when invoked <code>myObject.mySetterFunction = myValue</code></li>
-              </ul>
-            </li>
-            <li><code>import { myFunctionName } from "./external_js_file"</code> to use a function in another file exported by <code>export const myFunctionName()</code>
-              <ul>
-                <li>file looks for the magical words <code>export</code> to make it valid for importing</li>
-                <li>Export is also possible by <code>export { myFunctionName, myVariableName }</code> on its own line</li>
-                <li>You may import all like <code>import * as myImportedObjectName from "./external_js_file";</code></li>
-                <li><code>export default ...</code> serves as a fallback if an import fails</li>
-                <li><code>import myFunctionName from './external_js_file'</code> without the curly brackets serves as the default import</li>
-              </ul>
-            </li>
-            <li><code>myArray.filter()</code> iterates through each element of myArray, and adds to a new array if they pass the condition expressed in the argument; must return true or false <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">MDN: Array.prototype.filter()</a></li>
-            <li><code>myArray.map()</code> passes in each element of the array into the function (or arrow function) contained in the map() function argument, as the inner function's argument, without mutating the original array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">MDN: Array.prototype.map()</a></li>
-            <li>Yo, the function arguments are <strong>callbacks</strong>. Do you get it now? <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank">MDN: Callback function</a></li>
-          </ul>
+          <div class='entries'>
+            <div class='entry'>
+              <strong>Immediately Invoked Function Expression</strong>, also known as a <strong>IIFE</strong>, is a function is wrapped in parenthesis to execute as soon as it is invoked.</li>
+              <div class='definition'>
+                Syntax: <code>(myFunctionName() {})</code>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong class='term'>Arrow Functions</strong> more structure information:
+              <div class='definition'>
+                Syntax: <code>myFunctionName = (argument) => functionalityAutoReturns</code>
+                <codeblock>
+                  myFun = (arg) => arg+3;
+                  myFun(5);
+                  -----------------------------------
+                  returns 8;
+                </codeblock>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Rest Operators</strong> creates an array of all passed in arguments in a function.
+              <div class='definition'>
+                Syntax: <code>myFunction(...arg){}</code>
+                <codeblock>
+                  function myFunction(...myArray){
+                    
+                  }
+  
+                  myFunction(1,2,3);
+                </codeblock>
+                is equivalent to
+                <codeblock>
+                  function myFunction(1,2,3) {
+                    &ensp;myArray = [1,2,3];
+                  }
+  
+                  myFunction(1,2,3);
+                </codeblock>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Spread operator</strong> when invoked within an array, will 'combine' the two together by 'spreading' the smaller array.
+              <div class='definition'>
+                <codeblock>
+                  let smallArray = ['second', third'];
+                  let combinedArray = ['first', ...smallArray];
+                </codeblock>
+                becomes
+                <codeblock>
+                  combinedArray == ['first', 'second', 'third'];
+                </codeblock>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Object destructuring</strong>
+              <div class='definition'>
+                Syntax: <code>const { myObject_property : variableAssigment } = myObject;</code>
+                <ul>
+                  <li>Destructuring can be nested</li>
+                  <li>
+                    Destructuring can also be used as arguments when invoking a function such as
+                    <codeblock>
+                      myFunction(myObj);
+                      myFunction({myObjProp1, myObjProp2}) {
+
+                      }
+                    </codeblock>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Array destructuring</strong> is very much like object destructuring but you cannot specify which index goes into a variable. Instead they go in order of indexes and assignments.
+              <div class='definition'>
+                <ul>
+                  <li>Empty commas <code>[x, y, , , z]</code> can be used as a workaround.</li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>String literals</strong>
+              <div class='definition'>
+                Syntax: <code>`A string may contain a ${myVar} in the text without needing to concatinate.`</code>
+                <ul>
+                  <li>Backticks string literals support new lines without needing special characters.</li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Object literals</strong> are very much like prototypes in OOP.*
+              <div class='definition'>
+                <codeblock>
+                  let createNewObject = (arg1, arg2, arg3) => ({prop1, prop2, prop3});
+                  let myObj = createNewObject(arg1, arg2, arg3);
+                </codeblock>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>JavaScript Objects</strong>
+              <div class='definition'>
+                <ul>
+                  <li>
+                    Objects can have functions of course.
+                    <codeblock>
+                      class myClass {
+                        &ensp;constructor(myProp1){
+                          &ensp;&ensp;this.myProp1 = myProp1;
+                        &ensp;}
+                        &ensp;myClassFunctionName() {
+                          &ensp;&ensp;return result;
+                        &ensp;}
+                      }
+
+                      let myObject = myClass(passedInProperty);
+                      let result = myObject.myClassFunctionName();
+                    </codeblock>
+                  </li>
+                  <li>
+                    Classes support constructors, getters, and setters in ES6.
+                    <ul>
+                      <li><code>_variables</code> with underscores define a "private" variable.</li>
+                      <li><code>get myGetterFunction() {}</code> does not require parenthesis when invoked <code>let myValue = myObject.myGetterFunction</code></li>
+                      <li><code>set mySetterFunction() {}</code> does not require parenthesis when invoked <code>myObject.mySetterFunction = myValue</code></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Importing and Exporting</strong>
+              <div class='definition'>
+                <code>import { myFunctionName } from "./external_js_file"</code> to use a function in another file exported by <code>export const myFunctionName()</code>
+                <ul>
+                  <li>file looks for the magical words <code>export</code> to make it valid for importing</li>
+                  <li>Export is also possible by <code>export { myFunctionName, myVariableName }</code> on its own line</li>
+                  <li>You may import all like <code>import * as myImportedObjectName from "./external_js_file";</code></li>
+                  <li><code>export default ...</code> serves as a fallback if an import fails</li>
+                  <li><code>import myFunctionName from './external_js_file'</code> without the curly brackets serves as the default import</li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>More JS array functions</strong>
+              <div class='definition'>
+                <ul>
+                  <li><code>myArray.filter()</code> iterates through each element of myArray, and adds to a new array if they pass the condition expressed in the argument; must return true or false <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">MDN: Array.prototype.filter()</a></li>
+                  <li><code>myArray.map()</code> passes in each element of the array into the function (or arrow function) contained in the map() function argument, as the inner function's argument, without mutating the original array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">MDN: Array.prototype.map()</a></li>
+                  <li>Yo, the function arguments are <strong>callbacks</strong>. Do you get it now? <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank">MDN: Callback function</a>                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              Code opinion: Is there really any reason to use quotes for string literals when we have backticks?
+              <div class='definition'>
+                <ul>
+                  <li>Readability, quotes are easier to read if there is no interpolation, or <strong>template strings</strong></li>
+                  <li>Backwards compatability, but is becoming less relevent.</li>
+                  <li>Also useful for when double and single quotes are contained in a string.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <em>I've created a repo to build a <code>&lt;codeblock&gt;</code> block for HTML. The above examples are ridiculous on one line. There's really a lot of nice structuring I could do to put my UX interest to work.</em>
+        <div class='entry_footnotes'>
+          I've created a repo to build a <code>&lt;codeblock&gt;</code> block for HTML. The above examples are ridiculous on one line. There's really a lot of nice structuring I could do to put my UX interest to work.
+        </div>
       </div>
 
       <div class='journal_day'>
-        <h2><time datetime="2021-04-30">April 30th, 2021</time></h2>
-        <div class='entry_questions'>
-          <h3>Questions</h3>
-          <ul>
-            <li>All* things DOM related using JS:</li>
-          </ul>
-        </div>
-        <div class='entry_discoveries'>
-          <h3>Discoveries</h3>
-          <ul>
-            
-          </ul>
+        <h2><time datetime="2021-04-30">Friday - April 30th, 2021</time></h2>
+        <div class='entry_footnotes'>
+          Written off, was busy all day.
         </div>
       </div>
 
       <div class='journal_day'>
-        <h2>Weekend of <time datetime="2021-05-01">May 1st, 2021</time> through <time datetime="2021-05-02">May 2nd, 2021</time></h2>
-        <div class='entry_thoughts'>
-          <ul>
-            <li><em>Maybe I should have questions of the week. I have been answering the below slowly at least.</em></li>
-          </ul>
+        <h2>Weekend of <time datetime="2021-05-01">May 1st through 2nd, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entries'>
+            <ul>
+              <p>Maybe I should have questions of the week. I have been answering the above slowly at least.</p>
+              <p>Busy with some structuring updates -- hope this gets in React soon, it's becoming a bit much to manage.</p>
+            </ul>
+          </div>
         </div>
-        <div class='entry_questions'>
+      </div>
+    </div>
+
+    <div>
+      <h1>Week 3</h1>
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-03">Monday - May 3rd, 2021</time></h2>
+        <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
-            <li>CSS Preprocessors:
-              <ul>
-                <li>Sass</li>
-              </ul>
-            </li>
-            <li>Asynchronous JavaScript:
-              <ul>
-                <li>What is a callback?
-                  <ul>
-                    <li>A callback is passing in a function in a parameter in another function.</li>
-                    <li>Callback Hell is where you have a long nested chain of callbacks.</li>
-                  </ul>
-                </li>
-                <li>What is a promise?
-                  <ul>
-                    <li>An instantiated object that has a success and failure parameter functions.</li>
-                    <li><code>.then()</code> follows the success path.</li>
-                    <li>.catch()</li>
-                  </ul>
-                </li>
-                <li><del>What is async/await?</del> Woah woah, slow down, there's only so much I can learn at a time. Try not to get too far ahead before I understand prior information.</li>
-                <li>Is there really any reason to use quotes for string literals when we have backticks?
-                  <ul>
-                    <li>Code opinion</li>
-                    <li>Readability, quotes are easier to read if there is no interpolation, or <strong>template strings</strong></li>
-                    <li>Backwards compatabilit, but is becoming less relevent.</li>
-                    <li>Also useful for when double and single quotes are contained in a string.</li>
-                  </ul>
-                </li>
-                <li>What is a JS dispatch?</li>
-              </ul>
-            </li>
-            <li>What is array mapping?
-              <ul>
-                <li>The array<code>.map()</code> function creates a new array while applying the parameters passed in to each element in the array.</li>
-              </ul>
-            </li>
-            <li>What is a spread operator?</li>
-            <li>What is the advantage of arrow functions in JS?
-              <script>
-                let myFunction = (variable) => {
-                  console.log(`did a ${variable}`);
-                }
-                myFunction("thing")
-              </script>
-            </li>
+            <li>All* things DOM related using JS</li>
           </ul>
         </div>
-        <div class='entry_discoveries'>
+        <div class='entry_section discoveries'>
           <h3>Discoveries</h3>
+          <div class='entries'>
+            <div class='entry'>
+              More info: <a href="https://www.youtube.com/watch?v=hdI2bqOjy3c" target='_blank'>YouTube: JavaScript Crash Course For Beginners</a>
+            </div>
+            <div class='entry'>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-03">Tuesday - May 4th, 2021</time></h2>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
           <ul>
-            
+            <li>What are callbacks and how are they different from promises?</li>
+            <li>What is async/await?</li>
+            <li>What is a dispatch?</li>
           </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+          <div class='entries'>
+            <div class='entry'>
+              <strong>Asynchronous JavaScript</strong>
+            </div>
+            <div class='entry'>
+              <strong>Callbacks</strong> are passing in a function in a parameter in another function.
+              <ul>
+                <li>Callback Hell is where you have a long nested chain of callbacks.</li>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>Promises</strong> are instantiated objects that has a success and failure parameter functions.
+              <ul>
+                <li><code>.then()</code> follows the success path.</li>
+                <li><code>.catch()</code> follows the failure path.</li>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>Async/Await</strong>
+            </div>
+            <div class='entry'>
+              <strong>Dispatch</strong>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -725,7 +832,7 @@
       <h6>Thoughts:</h6>
       <dl>
         <dt>What are the long term mental health effects from impossible deadlines + covid?</dt>
-        <dd>I have support from people who genuinely care about me ;_;</dd>
+        <dd>I have support from people who genuinely care about me ;-;</dd>
 
         <dt>Do I really need to leetcode?</dt>
         <dd>Maybe.</dd>
@@ -739,7 +846,9 @@
     </div>
     <div>
       <h6>Roadmap:</h6>
-      React, Vue, testing methodologies, cs theory/algorithms
+      React -> Vue -> testing methodologies -> CS theory/algorithms
     </div>
   </body>
 </html>
+
+<script src="../html_codeblock/codeblock.js"></script>
