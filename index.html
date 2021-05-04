@@ -891,13 +891,17 @@
       </div>
 
       <div class='journal_day'>
-        <h2><time datetime="2021-05-03">Tuesday - May 4th, 2021</time></h2>
+        <h2><time datetime="2021-05-04">Tuesday - May 4th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+            <p>I'm feeling it a bit today, going to take it easy.</p>
+          </div>
+        </div>
         <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
             <li>What are callbacks and how are they different from promises?</li>
             <li>What is async/await?</li>
-            <li>What is a dispatch?</li>
           </ul>
         </div>
         <div class='entry_section discoveries'>
@@ -905,29 +909,75 @@
           <div class='entries'>
             <div class='entry'>
               <strong>Asynchronous JavaScript</strong>
+              <ul>
+                <li><a href='https://www.youtube.com/watch?v=PoRJizFvM7s' target='_blank'>YouTube: Async JS Crash Course - Callbacks, Promises, Async Await</a></li>
+                <li><a href='https://www.youtube.com/watch?v=vn3tm0quoqE' target='_blank'>YouTube: The Async Await Episode I Promised</a></li>
+                <li><a href='https://www.youtube.com/watch?v=cCOL7MC4Pl0' target='_blank'>YouTube: Jake Archibald: In The Loop - JSConf.Asia</a></li>
+              </ul>
             </div>
             <div class='entry'>
               <strong>Callbacks</strong> are passing in a function in a parameter in another function.
               <ul>
+                <li>For example <code>setTimeout(callbackFunction(), intevalInMS)</code></li>
                 <li>Callback Hell is where you have a long nested chain of callbacks.</li>
               </ul>
             </div>
             <div class='entry'>
-              <strong>Promises</strong> are instantiated objects that has a success and failure parameter functions.
-              <ul>
-                <li><code>.then()</code> follows the success path.</li>
-                <li><code>.catch()</code> follows the failure path.</li>
-              </ul>
+              <strong>Promises</strong> are instantiated objects that has a fulfilled and rejected parameter functions. <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise' target='_blank'>MDN: Promise</a>
+              <div class='definition'>
+                Syntax: Within the functionCall(){ <code>return new Promise((fulfilled, rejected) => {})</code> }
+                <br>
+                <code>fulfilled</code> and <code>rejected</code> are callback functions that are called when the respective tasks are sucessful or not
+                <ul>
+                  <li><code>functionCall().then(runThisFunction)</code> executes parameter if promise is fulfilled.</li>
+                  <li><code>functionCall().catch(runThisFunction)</code> executes parameter if promise fails.</li>
+                  <li><code>Promise.all([promise1, promise2, promise3]).then();</code> takes in an array of promises and performs .then() if all are fulfilled.</li>
+                </ul>
+              </div>
             </div>
             <div class='entry'>
-              <strong>Async/Await</strong>
+              <strong>Async/Await</strong> is another way to express promises. <a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await' target='_blank'>MDN: Making asynchronous programming easier with async and await</a>
+              <div class='definition'>
+                Syntax: placing <code>async</code> in front of a function, and having <code>await</code> for any callbacks within said function
+                <codeblock>
+                  let result = async () => {
+                    &ensp;await fetchResultFromServer()
+                  }
+                </codeblock>
+              </div>
             </div>
             <div class='entry'>
-              <strong>Dispatch</strong>
+              <strong>Resource:</strong>
+              <div class='definition'>
+                <a href='https://jsonplaceholder.typicode.com/' target='_blank'>https://jsonplaceholder.typicode.com/</a> for JSON API testing.
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-05">Wednesday - May 5th, 2021</time></h2>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>What is a dispatch?</li>
+            <li>What is a reducer?</li>
+            <li>What is a closure?</li>
+            <li>What does hoisting mean?</li>
+            <li>How often to ping the server for updates?</li>
+          </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+          <div class='entries'>
+            <div class='entry'>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div>
