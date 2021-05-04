@@ -795,6 +795,88 @@
                   <li>Object properties can be dynamically added by simply assigning the value to a paramter <code>myObject.newParamter = value;</code></li>
                   <li><code>JSON.stringify(myArray)</code> will flatten a properly formatted JSON object into a string.</li>
                   <li>High-order array functions auto-return might be implcit, <ins>only if there is ONE expression in the arrow function.</ins></li>
+                  <li>In the browser inspector for JS objects, the <code>__proto__</code> property inspects the object's prototype.</li>
+                  <li>Parenthesis are not necessary for a single parameter in an arrow function.</li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>The JavaScript DOM</strong>
+              <div class='definition'>
+                <ul>
+                  <li>The window object is the highest level in the DOM.</li>
+                  <li>Followed by the document.</li>
+                  <li><code>domElement.getElementById()</code></li>
+                  <li><code>document.querySelector()</code> is used to specify CSS selector such as "#id" or ".class", recommended
+                    <ul>
+                      <li><code>document.querySelector('#title')</code> for example will grab item with id 'title'</li>
+                      <li><code>document.querySelectorAll('.definition')</code> will grab all items with the class 'definition'</li>
+                    </ul>
+                  </li>
+                  <li><code>document.getElementByClassName()</code> and <code>document.getElementByTagName()</code> will return an HTMLCollection of items, however is not compatible with array methods.</li>
+                  <li>Elements have <strong>MANY</strong> built in methods for manipulating the DOM</li>
+                  <li><code>document.createElement()</code> can add a element to the DOM.</li>
+                </ul>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Events</strong>
+              <div class='definition'>
+                <code>selectedElement.addEventListener('eventType', callbackMethod)</code> binds an event listener
+                <codeblock>
+                  const logEntry = document.querySelector('.entry');
+
+                  clickCounter = 0;
+                  logEntry.addEventListener('click', (e) => {
+                    &ensp;e.preventDefault();
+                    &ensp;clickCount++;
+                    &ensp;console.log(e.target); // returns DOM object of event
+                  });
+                </codeblock>
+
+                Demo:
+                <div id='clicker' style='cursor: pointer; border: 1px solid black; display: inline-block; user-select: none; padding: 5px 20px; background-color: silver;'>
+                  You have clicked this box 0 times!
+                </div>
+                <script>
+                  const clickerBox = document.querySelector('#clicker');
+
+                  let clickCount = 0;
+                  clickerBox.addEventListener('mousedown', (e) => {
+                    e.preventDefault();
+                    clickerBox.style = 'cursor: pointer; border: 1px solid black; display: inline-block; user-select: none; padding: 5px 20px; background-color: white;';
+                    clickCount++;
+                    clickerBox.innerHTML = `You have clicked this box ${clickCount} times!`;
+                  });
+                  clickerBox.addEventListener('mouseup', (e) => {
+                    e.preventDefault();
+                    clickerBox.style = 'cursor: pointer; border: 1px solid black; display: inline-block; user-select: none; padding: 5px 20px; background-color: silver;';
+                  });
+                </script>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>High Order Functions and Arrays</strong> <a href='https://www.youtube.com/watch?v=rRgD1yVwIvE' target='_blank'>YouTube: JavaScript Higher Order Functions & Arrays</a>
+              <div class='definition'>
+                <ul>
+                  <li><strong>forEach()</strong> <code>myArray.forEach(callbackFunction((selfDefinedIndexValue) => {});</code></li>
+                  <li><strong>filter()</strong> <code>let filteredArray = myArray.filter((selfDefinedIndexValue) => {})</code> must return a boolean value, true will <ins>push</ins> to <code>filteredArray</code></li>
+                  <li><strong>map()</strong> <code>let mappedArray = myArray.map((selfDefinedIndexValue) => {})</code> return value to be <ins>pushed</ins> to <code>mappedArray</code></li>
+                  <li>
+                    <strong>sort()</strong> creates new array based on conditions, must return <ins>1</ins> or <ins>-1</ins>
+                    <codeblock>
+                      let sortedArray = myArray.sort((selfDefinedIndexValue1, selfDefinedIndexValue2) => {
+                        &ensp;selfDefinedIndexValue1 > selfDefinedIndexValue2 ? 1 : -1
+                      });
+                    </codeblock></li>
+                  <li>
+                    <strong>reduce()</strong> creates a new <ins>single value</ins> from a reducer function, don't forget the second parameter after the callback
+                    <codeblock>
+                      let reducedArray = myArray.reduce((returnedValue, selfDefinedIndexValue) => {
+                        &ensp;return returnedValue + selfDefinedIndexValue;
+                      }, 0);
+                    </codeblock>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -802,6 +884,9 @@
               Code Opinion: You should declare variables with <code>const</code> unless you know ahead of time the value will change.
             </div>
           </div>
+        </div>
+        <div class='entry_footnotes'>
+          That last bit with the High Order Functions and Arrays was incredibly useful to learn what I have seen here and there.
         </div>
       </div>
 
