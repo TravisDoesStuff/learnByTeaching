@@ -961,8 +961,6 @@
         <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
-            <li>What is a dispatch?</li>
-            <li>What is a reducer?</li>
             <li>What is a closure?</li>
             <li>What does hoisting mean?</li>
             <li>How often to ping the server for updates?</li>
@@ -972,9 +970,44 @@
           <h3>Discoveries</h3>
           <div class='entries'>
             <div class='entry'>
-              
+              <strong>Hoisting</strong> is when JS variables and functions can be used before they are declared. In other words declarations are moved to the top. However keep in mind that varible defining still follows sequential rules. <em>There is realistically no reason to do this.</em>
+              <div class='definition'>
+                <p>Variable <strong>declaration</strong> brings a variable into existence and allocating memory to it.</p>
+                <p>Variable <strong>initializing</strong> is assigning a value to a variable.</p>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Closures</strong> are functions within a function while having the inner-function scope the same as the outer-function.
+              <div class='definition'>
+                <p>Also relevant to hoisting as when a function is called, the current step of variable assignments is relevent to the inner function called.</p>
+                <p>This is the result of lexicon scoping. Which pretty much means hierarcy.</p>
+                <p>Why is it seem so complicated yet simple? Is there another knowledge gap of other programming languages I'm unaware of.</p>
+                <p><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures' target='_blank'>MDN: Closure</a></p>
+              </div>
+            </div>
+            <div class='entry'>
+              <strong>Updates from the Server</strong>
+              <div class='definition'>
+                <ul>
+                  <li>Consider <a href='https://javascript.info/long-polling' target='_blank'>Long-Polling</a> for keeping a persistent hanging connection.</li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+        <div class='entry_footnotes'>
+          All these definitions are nice, but I need to look over some old projects and see about updating a few.
+        </div>
+      </div>
+
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-06">Thursday - May 6th, 2021</time></h2>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>What is the difference between call(), bind(), and apply()?</li>
+            <li>I need a definition of syntactic sugar.</li>
+          </ul>
         </div>
       </div>
 
