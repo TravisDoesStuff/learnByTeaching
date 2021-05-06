@@ -970,19 +970,24 @@
           <h3>Discoveries</h3>
           <div class='entries'>
             <div class='entry'>
-              <strong>Hoisting</strong> is when JS variables and functions can be used before they are declared. In other words declarations are moved to the top. However keep in mind that varible defining still follows sequential rules. <em>There is realistically no reason to do this.</em>
+              <strong>Hoisting</strong> is when JS variables and functions can be used before they are declared. In other words declarations are moved to the top. However keep in mind that varible defining still follows sequential rules. <em>There is no reason to do this.</em>
               <div class='definition'>
-                <p>Variable <strong>declaration</strong> brings a variable into existence and allocating memory to it.</p>
-                <p>Variable <strong>initializing</strong> is assigning a value to a variable.</p>
+                <ul>
+                  <li>Variable <strong>declaration</strong> brings a variable into existence and allocating memory to it.</li>
+                  <li>Variable <strong>initializing</strong> is assigning a value to a variable.</li>
+                  <li><ins>Modern web browsers ignore hoisting and may display a warning.</ins></li>
+                </ul>
               </div>
             </div>
             <div class='entry'>
               <strong>Closures</strong> are functions within a function while having the inner-function scope the same as the outer-function.
               <div class='definition'>
-                <p>Also relevant to hoisting as when a function is called, the current step of variable assignments is relevent to the inner function called.</p>
-                <p>This is the result of lexicon scoping. Which pretty much means hierarcy.</p>
-                <p>Why is it seem so complicated yet simple? Is there another knowledge gap of other programming languages I'm unaware of.</p>
-                <p><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures' target='_blank'>MDN: Closure</a></p>
+                <ul>
+                  <li>Also relevant to hoisting as when a function is called, the current step of variable assignments is relevent to the inner function called.</li>
+                  <li>This is the result of lexicon scoping. Which pretty much means hierarcy.</li>
+                  <li>Why is it seem so complicated yet simple? Is there another knowledge gap of other programming languages I'm unaware of. It is definately relevent to using <code>var</code> however.</li>
+                  <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures' target='_blank'>MDN: Closure</a></li>
+                </ul>
               </div>
             </div>
             <div class='entry'>
@@ -990,6 +995,8 @@
               <div class='definition'>
                 <ul>
                   <li>Consider <a href='https://javascript.info/long-polling' target='_blank'>Long-Polling</a> for keeping a persistent hanging connection.</li>
+                  <li>Comet previously was the way to go with the server pushing updates to the client with an open HTTP request.</li>
+                  <li>WebSocket is probably the way to go now.</li>
                 </ul>
               </div>
             </div>
