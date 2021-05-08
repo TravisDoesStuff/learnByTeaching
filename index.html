@@ -551,6 +551,7 @@
             <li>Remember that <code>const VARIABLENAME = 'whatever';</code> should to be in ALLCAPS</li>
             <li>Arrays or objects declared with <code>const</code> can still have it's elements/properties mutated.</li>
             <li><code>Object.freeze(myObject)</code> will prevent array/object mutations</li>
+            <li><code>Object.seal(myObject)</code> will allow object property changes, but prevent new properties from being added.</li>
             <li><strong>Anomynous functions</strong> are functions that do not have a name, often seen in arrow functions</li>
             <li>Curly braces are not necessary for arrow functions, such as <code>let addTwoNumbers = (a, b) => return a+b</code></li>
           </ul>
@@ -1009,7 +1010,12 @@
       </div>
 
       <div class='journal_day'>
-        <h2><time datetime="2021-05-06">Thursday - May 6th, 2021</time></h2>
+        <h2><time datetime="2021-05-06">Thursday - May 6th, 2021</time> and <time datetime="2021-05-07">Friday - May 7th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+            <p><strong><code>this</code></strong> is tricky.</p>
+          </div>
+        </div>
         <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
@@ -1022,32 +1028,113 @@
           <h3>Discoveries</h3>
           <div class='entries'>
             <div class='entry'>
-              <strong>What is 'this'?</strong>
+              <strong>this</strong> is a property of execution context. The object that is executing the current function.
               <div class='definition'>
-                <p>Panic rambling: when <code>this</code> is used in a object function() it pertains to the object, but within an arrow function within an object it pertains to global object.</p>
+                Rough notes:
+                <ul>
+                  <li><code>this</code> has everything to do with how the function was called, whether in a class or a <code>window</code> level. When a function containing <code>this</code> called at a top level, <code>this</code> value is the <code>window</code> object.</li>
+                  <li>When <code>this</code> is used in a object function() it pertains to the object, but within an arrow function within an object it pertains to global object.</li>
+                  <li><code>this</code> within a object's method references the object</li>
+                  <li><code>this</code> within a regular function references the global object <code>window</code></li>
+                  <li>If a regular (built-in) function is used, even within a defined object, <code>this</code> within the function will refer to the window. This is because the regular function is NOT a method of the object in question.</li>
+                  <li>
+                    In <code>'use strict';</code> mode:
+                    <ul>
+                      <li><code>this</code> in a global function will be <ins>undefined</ins></li>
+                    </ul>
+                  </li>
+                  <li>
+                    In an arrow function:
+                    <ul>
+                      <li><code>this</code> is set to global</li>
+                      <li>In <code>'strict mode';</code>, <code>this</code> is undefined.</li>
+                      <li>This happens because arrow functions do not have a set binding.</li>
+                      <li>For this reason, <strong>do not</strong> use arrow functions for an object's method or callback.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Functions for handling <code>this</code>
+                    <ul>
+                      <li>
+                        <strong>bind</strong>
+                        <ul>
+                          <li>Creates a <ins>new method</ins> that needs to be invoked.</li>
+                          <li>Calling a method with <code>.bind()</code> such as <code>myFunction.bind(myObject)</code> will explicitly set the function's <code>this</code> to the object.</li>
+                          <li>Is set permemently to the function once set.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>call</strong>
+                        <ul>
+                          <li>Calls a function with extra functionality for specifying <code>this</code> within the function.</li>
+                          <li>First argument in a call method specifies the object being set to <code>this</code>.</li>
+                          <li>Remaining arguments is for each argument specified in the function's arguments.</li>
+                          <li>Difference between call and bind is the function fires immediately. Whereas <code>bind()</code> needs to be set to a new function name.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>apply</strong>
+                        <ul>
+                          <li>The same as <code>call()</code> but uses an array for it's argument.</li>
+                          <li>Made redundant with the spread operator used in <code>call()</code>.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                Resources:
                 <ul>
                   <li><a href='https://www.youtube.com/watch?v=YOlr79NaAtQ' target='_blank'>YouTube: What is THIS in JavaScript? in 100 seconds</a></li>
+                  <li><a href='https://www.youtube.com/watch?v=gvicrj31JOM' target='_blank'>YouTube: JavaScript this Keyword</a></li>
+                  <li><a href='https://www.youtube.com/watch?v=g2WcckBB_q0' target='_blank'>YouTube: Bind Explained in JavaScript</a></li>
+                  <li><a href='https://betterprogramming.pub/understanding-the-this-keyword-in-javascript-cb76d4c7c5e8' target='_blank'>Medium: Understanding the “this” Keyword in JavaScript</a></li>
+                  <li><a href='https://medium.com/@iampika/understanding-the-this-keyword-in-javascript-af5878e1af8c target='_blank'>Medium: Understanding the this keyword in JavaScript</a></li>
                 </ul>
               </div>
             </div>
             <div class='entry'>
               <strong>Unknown Languages/Frameworks I Keep Hearing About</strong>
               <div class='definition'>
-                <ol>
-                  <li><strong>Rust</strong> multipurpose; Is pretty much an expansion of C and C++ with added safety and performance.</li>
-                  <li><strong>TypeScript</strong> is a JavaScript superset that allows for strong-typing, object-orientation, and transpiles to JS.</li>
-                  <li><strong>Ruby</strong> multipurpose; Interpreted high-level language</li>
-                  <li><strong>Kotlin</strong> often used to build Android applications.</li>
-                  <li><strong>Go</strong> aka golang; Is a multi-purpose language similar to C, often used for back-end services.</li>
-                  <li><strong>Julia</strong> is a multipurpose high-level language often used for science and engineering.</li>
-                  <li><strong>Dart</strong></li>
-                  <li><strong>Scala</strong></li>
-                  <li><strong>Haskell</strong></li>
-                  <li><strong>Ember</strong></li>
-                  <li><strong>GraphQL</strong></li>
-                </ol>
+                <ul>
+                  <li>
+                    Languages
+                    <ol>
+                      <li><strong>Rust</strong> multipurpose, is pretty much an expansion of C and C++ with added safety and performance.</li>
+                      <li><strong>Ruby</strong> multipurpose interpreted high-level language</li>
+                      <li><strong>Kotlin</strong> often used to build Android applications.</li>
+                      <li><strong>Julia</strong> is a multipurpose high-level language often used for science and engineering.</li>
+                      <li><strong>Go</strong> aka golang; Is a multi-purpose language similar to C, often used for back-end services.</li>
+                      <li><strong>Dart</strong> is a high-level language with C-style syntax often </li>
+                      <li><strong>Scala</strong> is a high-level statically typed language that works with the JVM.</li>
+                      <li><strong>Haskell</strong> is a general purpose language often used for business and data analytics.</li>
+                    </ol>
+                  </li>
+                  <li>
+                    Frameworks
+                    <ol>
+                      <li><strong>TypeScript</strong> is a JavaScript superset that allows for strong-typing, object-orientation, and transpiles to JS.</li>
+                      <li><strong>Ember</strong> is a JavaScript framework designed to build a scalable SPA.</li>
+                    </ol>
+                  </li>
+                  <li>
+                    Other
+                    <ol>
+                      <li><strong>GraphQL</strong> is a data query system for APIs.</li>
+                      <li><strong>ElasticSearch</strong> is a search engine for large databases.</li>
+                      <li><strong>Redis</strong> aka Remote Dictionary Server, is a data store and cache.</li>
+                      <li><strong>NGINX</strong> is a load balancer.</li>
+                      <li>
+                        <strong>Salesforce</strong> is a Customer Relationship Management (CRM) service.
+                        <ul>
+                          <li>Maintaining relationship between your company and customers.</li>
+                        </ul>
+                      </li>
+                    </ol>
+                  </li>
+                </ul>
               </div>
               <a href='https://insights.stackoverflow.com/survey/2020' target='_blank'>StackOverflow: 2020 Developer Survey</a>
+              <img style='background-color: #2f3337;' src='https://cdn.sstatic.net/insights/Img/Survey/2020/tech_network-1.svg?v=e1fb2941ad25'/>
             </div>
             <div class='entry'>
               <strong>Syntactic Sugar</strong> is writing code that is easier to read. Done carefully it can easier for other developers to read, but done needlessly can be problematic.
@@ -1056,6 +1143,42 @@
               <p><a href='https://www.youtube.com/watch?v=9emXNzqCKyg' target='_blank'>The JavaScript Survival Guide</a></p>
             </div>
           </div>
+        </div>
+        <div class='entry_section'>
+          <h3>Meetup - Front Range Front-end</h3> Building Forms Mobile Users Will Love
+          <div class='entries'>
+            <div class='entry'>
+              <strong>Accessibility</strong>
+              <div class='definition'>
+                <p>Often neglected, devices are often built for the fully-abled. It doesn't have to be physical, it can be at a sensory level. It can also be external such as being on a bumpy bus or turbulent plane, or a temporary distraction.</p>
+                <p>This goes back to <mark>semantic markup</mark> to help with accessibility.</p>
+                <p><strong>ARIA</strong> is Accessible Rich Internet Applications <a href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA' target='_blank'>MDN: ARIA</a></p>
+                Wrap elements fully in tags.
+                <codeblock>
+                  <label>
+                    Username
+                    <input type='text' />
+                  </label>
+                </codeblock>
+                <p><em>Semantic HTML is most commonly see in <code>&lt;input type='whatever'/&gt;</code></em></p>
+                Useful semantic HTML attributes.
+                <ul>
+                  <li><strong>autocomplete</strong> reduces number of typing the user needs to do</li>
+                  <li><strong>inputmode</strong> suggests ideal on-screen keyboard or mobile</li>
+                </ul>
+                <ul>
+                  <li>autocorrect</li>
+                  <li>autocapitalize</li>
+                  <li>spellcheck</li>
+                </ul>
+                can be overridden/disabled to aid in accessibility and UX
+              </div>
+              <p><em>Consider three date fields for date, month, year instead of a date field to reduce the amount of scrolling a user needs to do. With correct labels and inputmodes of course.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class='entry_footnotes'>
+          Wow <code>this</code> was a lot to take in. Gonna call it a day. Although I think I got this this thing down along with the methods, I struggle a bit with objects. Gotta remember too at the moment I'm just learning the fundamentals, the more complex gotchas will come later.
         </div>
       </div>
 
