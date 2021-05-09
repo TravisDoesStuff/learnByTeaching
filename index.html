@@ -725,7 +725,7 @@
                 <ul>
                   <li><code>myArray.filter()</code> iterates through each element of myArray, and adds to a new array if they pass the condition expressed in the argument; must return true or false <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">MDN: Array.prototype.filter()</a></li>
                   <li><code>myArray.map()</code> passes in each element of the array into the function (or arrow function) contained in the map() function argument, as the inner function's argument, without mutating the original array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">MDN: Array.prototype.map()</a></li>
-                  <li>Yo, the function arguments are <strong>callbacks</strong>. Do you get it now? <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank">MDN: Callback function</a>                  </li>
+                  <li><del>Yo, the function arguments are <strong>callbacks</strong>. Do you get it now? <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" target="_blank">MDN: Callback function</a></del></li>
                 </ul>
               </div>
             </div>
@@ -921,6 +921,7 @@
               <ul>
                 <li>For example <code>setTimeout(callbackFunction(), intevalInMS)</code></li>
                 <li>Callback Hell is where you have a long nested chain of callbacks.</li>
+                <li>EDIT: Sort of, all callbacks are higher-order functions but not all higher-order functions are callbacks.</li>
               </ul>
             </div>
             <div class='entry'>
@@ -1182,27 +1183,40 @@
         </div>
       </div>
 
-    </div>
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-08">Saturday - May 8th, 2021</time></h2>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+            <div class='entries'>
+              <div class='entry'>
+                <ul>
+                  <li><strong>Higher Order Functions</strong> are functions that are passed into other functions as arguments.</li>
+                  <li><code>typeof</code> is an operator.</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-09">Sunday - May 9th, 2021</time></h2>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>What is currying?</li>
+            <li>What is a generator function?</li>
+            <li>Gotcha: What is functional programming? What is a pure function?</li>
+          </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+            <div class='entries'>
+              <div class='entry'>
+              </div>
+            </div>
+        </div>
+      </div>
 
-    <div>
-      <h6>Thoughts:</h6>
-      <dl>
-        <dt>What are the long term mental health effects from impossible deadlines + covid?</dt>
-        <dd>I have support from people who genuinely care about me ;-;</dd>
-
-        <dt>Do I really need to leetcode?</dt>
-        <dd>Maybe.</dd>
-
-        <dt>How much am I going to end up reinventing the wheel on this page?</dt>
-        <dd>In a way that looks nice and gives a nice experience.</dd>
-
-        <dt>I really have reverted to jr level developer.</dt>
-        <dd>And I'm relearning at a breakneck speed.</dd>
-      </dl>
-    </div>
-    <div>
-      <h6>Roadmap:</h6>
-      React -> Vue -> testing methodologies -> CS theory/algorithms
     </div>
   </body>
 </html>
