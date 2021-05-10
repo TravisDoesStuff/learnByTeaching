@@ -122,7 +122,7 @@
               </ul>
             </li>
             <li>Look through this: <a href="https://websitesetup.org/html5-cheat-sheet/" target='_blank'>HTML5 Cheat Sheet</a></li>
-            <li>This list needs to be managable while I work full time.</li>
+            <li>This list needs to be manageable while I work full time.</li>
             <li>React Denver Meetup, career discussion</li>
           </ul>
         </div>
@@ -209,7 +209,7 @@
         <div class='entry_questions'>
           <h3>Questions</h3>
           <ul>
-            <li>Check into some addtional HTML interview questions. <a href='https://static.javatpoint.com/htmlpages/images/html-layouts.png' target='_blank'>JavaTPoint</a>
+            <li>Check into some additional HTML interview questions. <a href='https://static.javatpoint.com/htmlpages/images/html-layouts.png' target='_blank'>JavaTPoint</a>
               <ul>
                 <li>Some additional semantic HTML tags, probably for SEO.
                   <ul>
@@ -227,7 +227,7 @@
                 </li>
                 <li>Empty elements are elements with no content, such as <code>&lt;br&gt;</code>, also known as void elements.</li>
                 <li><code>&lt;progress&gt;</code> have a defined max, while <code>&lt;meter&gt;</code> has a maximum of 1 — or 100%<br>
-                  <label for='prgressBarExample'>Progress:</label>
+                  <label for='progressBarExample'>Progress:</label>
                   <progress name='progressBarExample' value='4' max='5'>80%</progress>
                   <br>
                   <label for='meterBarExample'>Usage:</label>
@@ -239,7 +239,7 @@
                   <label for='doggos'>Select a Dog:</label>
                   <input list='doggo-breeds' id='doggos' name='doggos' />
                   <datalist id='doggo-breeds'>
-                    <option value='Golden Retreiver' />
+                    <option value='Golden Retriever' />
                     <option value='Dalmatian' />
                     <option value='Poodle' />
                     <option value='Chihuahua' />
@@ -361,7 +361,7 @@
                     </li>
                     <li>Flex: <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/' target='_blank'>CSS-Tricks: A Complete Guide to Flexbox</a>
                       <ul>
-                        <li>Allows flexability of container content when content is dynamic or unknown size.</li>
+                        <li>Allows flexibility of container content when content is dynamic or unknown size.</li>
                         <li>Simply set parent element, or container, to <code>display: flex;</code></li>
                         <li>Very useful for SPAs</li>
                         <li>Properties
@@ -552,7 +552,7 @@
             <li>Arrays or objects declared with <code>const</code> can still have it's elements/properties mutated.</li>
             <li><code>Object.freeze(myObject)</code> will prevent array/object mutations</li>
             <li><code>Object.seal(myObject)</code> will allow object property changes, but prevent new properties from being added.</li>
-            <li><strong>Anomynous functions</strong> are functions that do not have a name, often seen in arrow functions</li>
+            <li><strong>Anonymous functions</strong> are functions that do not have a name, often seen in arrow functions</li>
             <li>Curly braces are not necessary for arrow functions, such as <code>let addTwoNumbers = (a, b) => return a+b</code></li>
           </ul>
         </div>
@@ -634,7 +634,7 @@
             <div class='entry'>
               <strong>Object destructuring</strong>
               <div class='definition'>
-                Syntax: <code>const { myObject_property : variableAssigment } = myObject;</code>
+                Syntax: <code>const { myObject_property : variableAssignment } = myObject;</code>
                 <ul>
                   <li>Destructuring can be nested</li>
                   <li>
@@ -660,7 +660,7 @@
             <div class='entry'>
               <strong>String literals</strong>
               <div class='definition'>
-                Syntax: <code>`A string may contain a ${myVar} in the text without needing to concatinate.`</code>
+                Syntax: <code>`A string may contain a ${myVar} in the text without needing to concatenate.`</code>
                 <ul>
                   <li>Backticks string literals support new lines without needing special characters.</li>
                 </ul>
@@ -734,7 +734,7 @@
               <div class='definition'>
                 <ul>
                   <li>Readability, quotes are easier to read if there is no interpolation, or <strong>template strings</strong></li>
-                  <li>Backwards compatability, but is becoming less relevent.</li>
+                  <li>Backwards compatibility, but is becoming less relevant.</li>
                   <li>Also useful for when double and single quotes are contained in a string.</li>
                 </ul>
               </div>
@@ -793,9 +793,9 @@
                   <li><code>myString.split(',')</code> splits the string into an array with the argument being the separator.</li>
                   <li>Arrays content may have multiple types, like an object.</li>
                   <li><code>myArray.indexOf('value')</code> will find the index number of the search value in the array.</li>
-                  <li>Object properties can be dynamically added by simply assigning the value to a paramter <code>myObject.newParamter = value;</code></li>
+                  <li>Object properties can be dynamically added by simply assigning the value to a parameter <code>myObject.newParameter = value;</code></li>
                   <li><code>JSON.stringify(myArray)</code> will flatten a properly formatted JSON object into a string.</li>
-                  <li>High-order array functions auto-return might be implcit, <ins>only if there is ONE expression in the arrow function.</ins></li>
+                  <li>High-order array functions auto-return might be implicit, <ins>only if there is ONE expression in the arrow function.</ins></li>
                   <li>In the browser inspector for JS objects, the <code>__proto__</code> property inspects the object's prototype.</li>
                   <li>Parenthesis are not necessary for a single parameter in an arrow function.</li>
                 </ul>
@@ -919,7 +919,7 @@
             <div class='entry'>
               <strong>Callbacks</strong> are passing in a function in a parameter in another function.
               <ul>
-                <li>For example <code>setTimeout(callbackFunction(), intevalInMS)</code></li>
+                <li>For example <code>setTimeout(callbackFunction(), intervalInMS)</code></li>
                 <li>Callback Hell is where you have a long nested chain of callbacks.</li>
                 <li>EDIT: Sort of, all callbacks are higher-order functions but not all higher-order functions are callbacks.</li>
               </ul>
@@ -929,7 +929,7 @@
               <div class='definition'>
                 Syntax: Within the functionCall(){ <code>return new Promise((fulfilled, rejected) => {})</code> }
                 <br>
-                <code>fulfilled</code> and <code>rejected</code> are callback functions that are called when the respective tasks are sucessful or not
+                <code>fulfilled</code> and <code>rejected</code> are callback functions that are called when the respective tasks are successful or not
                 <ul>
                   <li><code>functionCall().then(runThisFunction)</code> executes parameter if promise is fulfilled.</li>
                   <li><code>functionCall().catch(runThisFunction)</code> executes parameter if promise fails.</li>
@@ -972,7 +972,7 @@
           <h3>Discoveries</h3>
           <div class='entries'>
             <div class='entry'>
-              <strong>Hoisting</strong> is when JS variables and functions can be used before they are declared. In other words declarations are moved to the top. However keep in mind that varible defining still follows sequential rules. <em>There is no reason to do this.</em>
+              <strong>Hoisting</strong> is when JS variables and functions can be used before they are declared. In other words declarations are moved to the top. However keep in mind that variable defining still follows sequential rules. <em>There is no reason to do this.</em>
               <div class='definition'>
                 <ul>
                   <li>Variable <strong>declaration</strong> brings a variable into existence and allocating memory to it.</li>
@@ -985,10 +985,12 @@
               <strong>Closures</strong> are functions within a function while having the inner-function scope the same as the outer-function.
               <div class='definition'>
                 <ul>
-                  <li>Also relevant to hoisting as when a function is called, the current step of variable assignments is relevent to the inner function called.</li>
-                  <li>This is the result of lexicon scoping. Which pretty much means hierarcy.</li>
-                  <li>Why is it seem so complicated yet simple? Is there another knowledge gap of other programming languages I'm unaware of. It is definately relevent to using <code>var</code> however.</li>
+                  <li>Also relevant to hoisting as when a function is called, the current step of variable assignments is relevant to the inner function called.</li>
+                  <li>This is the result of lexicon scoping. Which pretty much means hierarchy.</li>
+                  <li>Why is it seem so complicated yet simple? Is there another knowledge gap of other programming languages I'm unaware of. It is definitely relevant to using <code>var</code> however.</li>
                   <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures' target='_blank'>MDN: Closure</a></li>
+                  <li>The inner function can still be called upon even after the outer function is returned. <a href='https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36' target='_blank'>Medium: Master the JavaScript Interview: What is a Closure?</a></li>
+                  <li>Use cases include data privacy for the variables within the outer function.</li>
                 </ul>
               </div>
             </div>
@@ -1022,10 +1024,10 @@
           <ul>
             <li>What is the difference between call(), bind(), and apply()?</li>
             <li>I need a definition of syntactic sugar.</li>
-            <li>Familiarize youself with all popular languages at a top level.</li>
+            <li>Familiarize yourself with all popular languages at a top level.</li>
           </ul>
         </div>
-        <div class='entry_secton discoveries'>
+        <div class='entry_section discoveries'>
           <h3>Discoveries</h3>
           <div class='entries'>
             <div class='entry'>
@@ -1061,7 +1063,7 @@
                         <ul>
                           <li>Creates a <ins>new method</ins> that needs to be invoked.</li>
                           <li>Calling a method with <code>.bind()</code> such as <code>myFunction.bind(myObject)</code> will explicitly set the function's <code>this</code> to the object.</li>
-                          <li>Is set permemently to the function once set.</li>
+                          <li>Is set permanently to the function once set.</li>
                         </ul>
                       </li>
                       <li>
@@ -1200,6 +1202,12 @@
       
       <div class='journal_day'>
         <h2><time datetime="2021-05-09">Sunday - May 9th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+            <p>One reason code is tricky for me is because I'm a visual learner, which means I need graphics/graphs/diagrams/etc to understand something, code is just text to me.</p>
+            <p>Might be good to research ways to make it easier for <strong>someone like me</strong> to learn.</p>
+          </div>
+        </div>
         <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
@@ -1210,13 +1218,95 @@
         </div>
         <div class='entry_section discoveries'>
           <h3>Discoveries</h3>
-            <div class='entries'>
-              <div class='entry'>
-              </div>
+          <div class='entries'>
+            <div class='entry'>
+              <strong>Currying</strong> writing a function that takes multiple arguments. The curry function has nested functions within.
             </div>
+            <div class='entry'>
+              <strong>Generators</strong> are objects created by generator functions, or <strong>function*. Which are functions that can be called repeatably while it retains it's internal state/context.</strong>
+              <ul>
+                <li>Return values are specified by the <code>yield</code> keyword.</li>
+                <li>Each <code>yield</code> can be stepped by the <code>.next().value</code> method.</li>
+                <li>Useful in asynchronous programming.</li>
+                <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*' target='_blank'>MDN: function*</a></li>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>Functional programming</strong> is writing software with pure functions.
+              <ul>
+                <li>
+                  <strong>Pure functions</strong> are functions that will produced an output based on the input, and only does that one thing.
+                  <ul>
+                    <li>Does not depend on any external factor or state.</li>
+                    <li>Highly reusable and easy to understand.</li>
+                    <li>Given the same input, will <ins>always</ins> return the same output. For example, <code>Math.random()</code> is an impure function.</li>
+                  </ul>
+                </li>
+                <li>Never alters the external state.</li>
+                <li>
+                  One possibility is returning a new object/array/result instead of mutating the existing one.
+                  <ul>
+                    <li>
+                      How is this dealt with in memory?
+                      <ul>
+                        <li>JS supports lazy cleanup.</li>
+                        <li>Negligible in reality.</li>
+                      </ul>
+                    </li>
+                    <li>Often seen in SPAs.</li>
+                  </ul>
+                </li>
+                <li>Avoid side effects:
+                  <ul>
+                    <li>Such as writing to a file, writing to console, calling other functions, writing to the screen, etc.</li>
+                    <li>No other outputs or inputs!</li>
+                  </ul>
+                </li>
+                <li>Declarative, in functional programming, describes what to do.</li>
+                <li>Imperative, outside of functional programming, describes how something is done. Often used in loops, conditionals, exception handling, etc.</li>
+                <li><a href='https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0' target='_blank'>Medium: Master the JavaScript Interview: What is Functional Programming?</a></li>
+                <li><a href='https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976' target='_blank'>Medium: Master the JavaScript Interview: What is a Pure Function?</a></li>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>I am a kinesthetic learner.</strong>
+              <ul>
+                <li><a href='https://medium.com/career-change-coder/understanding-your-individual-learning-styles-in-relation-to-learning-to-code-3ad24ebec551' target='_blank'>Medium: Understanding Your Individual Learning Styles in Relation to Learning to Code</a></li>
+                <li>Instant gratification? Or feedback?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='entry_footnotes'>
+          I need to have a tangible goal to work towards. Video poker is a go.
         </div>
       </div>
+    </div>
 
+    <div>
+      <h1>Week 4</h1>
+      <div class='journal_day'>
+        <h2><time datetime="2021-05-10">Monday - May 10th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+
+          </div>
+        </div>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+
+          </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+          <div class='entries'>
+
+          </div>
+        </div>
+        <div class='entry_footnotes'>
+
+        </div>
     </div>
   </body>
 </html>
