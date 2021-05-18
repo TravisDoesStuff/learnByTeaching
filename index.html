@@ -1286,28 +1286,48 @@
     <div>
       <h1>Week 4</h1>
       <div class='journal_day'>
-        <h2><time datetime="2021-05-10">Monday - May 10th, 2021</time></h2>
+        <h2><time datetime="2021-05-17">Monday - May 17th, 2021</time></h2>
         <div class='entry_section thoughts'>
           <div class='entry thoughts'>
-
+            <p>Been a bit between a heavy workload, and strong vaccine side effects. But is totally worth it.</p>
           </div>
         </div>
         <div class='entry_section questions'>
           <h3>Questions</h3>
           <ul>
-
+            <li>Figure out a few tricky loop keywords.</li>
           </ul>
         </div>
         <div class='entry_section discoveries'>
           <h3>Discoveries</h3>
           <div class='entries'>
-
+            <div class='entry'>
+              <li>
+                I found out that just "copying" an array is just making a <strong>reference</strong> to it <code>let clonedArray = originalArray;</code> and mutating the reference will also mutate the original.
+                <ul>
+                  <li><a href='https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/' target='_blank'>How to clone an array in JavaScript</a></li>
+                  <li>Shallow copies can and only clone a one-dimensional array. Deeper copies require more work.</li>
+                </ul>
+              </li>
+            </div>
+            <div class='entry'>
+              <strong>Advanced Loops</strong>
+              <ul>
+                <li><code>for...in</code> loops over the enumerable properties of an object, the "keys" in an array or object.</li>
+                <li><code>for...of</code> loops iterate over iterable objects, such as arrays, each variable <code>for(variable of object)</code> is the value and not the key. PHP equivalent is foreach()</li>
+                <li><code>forEach()</code> is a function needs a callback function.</li>
+                <li><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration' target='_blank'>MDN: Loops and iteration</a></li>
+                <li><a href='https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/' target='_blank'>freeCodeCamp: JavaScript forEach – How to Loop Through an Array in JS</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class='entry_footnotes'>
-
+          <p>Have I really convinced myself that no employer wants a designer?</p>
         </div>
+      </div>
     </div>
+
   </body>
 </html>
 
