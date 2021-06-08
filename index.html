@@ -7,6 +7,103 @@
   </head>
   <body>
     <h1>Journal Begins Here</h1>
+
+    <div>
+      <h1>Week 5</h1>
+      <div class='journal_day'>
+        <h2><time datetime="2021-06-07">Monday - June 7th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+            <p>The MVP of the video poker game is finished. Moving on to more advanced things, was stalled for a good while in learning as I was reinforcing what I learned about JS, worked on some other hobbies (gasp!) that I have, and got distracted by Elite Feet.</p>
+            <p>Time to keep an ear to the ground for ideas from friends and fellow developers.</p>
+          </div>
+        </div>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>The basics of React.js</li>
+          </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+          <div class='entries'>
+            <div class='entry'>
+              <strong>React.js</strong>
+              <ul>
+                <li>In the early days, keeping JS and HTML separate was fine as sites were relatively simple. React combines functionality and the content within each component.</li>
+                <li>React uses the <strong>Virtual DOM</strong> to handle DOM manipulation. And is automatically updated based on the state -- in real time.</li>
+                <a href='https://www.freecodecamp.org/news/learn-react-basics-in-10-minutes/'>Learn React basics in 10 minutes</a>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>React Lifecycle</strong>
+              <ul>
+                <li>
+                  <strong>Mounting</strong> is when the DOM tree is being built with all the components.
+                  <ul>
+                    <li>Instance of a component is being created and inserted in the DOM.</li>
+                    <li>
+                      Methods
+                      <ul>
+                        <li><code>constructor()</code></li>
+                        <li><code>render()</code> only required method.</li>
+                        <li><code>componentDidMount()</code> is invoked immediately after a component is mounted.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Updating
+                  <ul>
+                    <li>Changes to props or state.</li>
+                    <li>
+                      Methods
+                      <ul>
+                        <li><code>render()</code></li>
+                        <li><code>componentDidUpdate()</code> is invoked immediately when an update occurs.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Unmounting
+                  <ul>
+                    <li>Component is being removed from DOM.</li>
+                    <li>
+                      Methods
+                      <ul>
+                        <li><code>componentWillUnmount()</code></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href='https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/' target='_blank'>Diagram</a></li>
+              </ul>
+            </div>
+            <div class='entry'>
+              <strong>Other React Stuff</strong>
+              <ul>
+                <li>The <strong>Virtual DOM</strong> is the UI in memory vs the actual DOM. What makes it fast is that it is built before updating the components on the page. React will only update the particular element without updating the entire DOM. Useful for SPAs.</li>
+                <li>JSX doesn't require backticks for string literals.</li>
+                <li>Component variables should start with a capital letter.</li>
+                <li>By default, React escapes embedded code.</li>
+                <li><code>React.createElement()</code> is a function to build elements.</li>
+                <li>React components must act like pure functions. Meaning the input values must not be mutated.</li>
+                <li>Props are passed into a class component through it's constructor.</li>
+                <li>
+                  Data in React cannot flow upward. The solution is <strong>Lifting State Up</strong> where a common state is at the first ancestor of the components. You must use a controlled component since it's being passed in as a prop, which cannot be mutated.
+                  <ul>
+                    <li>Another solution is a Single Source of Truth such as Redux or Mobx.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='entry_footnotes'>
+          <p>How does one choose to make a component a class or a function? Also remember one day at a time.</p>
+        </div>
+      </div>
+    </div>
+
     <div>
       <h1>Week 1</h1>
       <div class='journal_day'>
