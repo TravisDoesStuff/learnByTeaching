@@ -102,6 +102,49 @@
           <p>How does one choose to make a component a class or a function? Also remember one day at a time.</p>
         </div>
       </div>
+      <div class='journal_day'>
+        <h2><time datetime="2021-06-09">Wednesday - June 9th, 2021</time></h2>
+        <div class='entry_section thoughts'>
+          <div class='entry thoughts'>
+            <p></p>
+          </div>
+        </div>
+        <div class='entry_section questions'>
+          <h3>Questions</h3>
+          <ul>
+            <li>What is a template literal?</li>
+            <li>What is React stateless?</li>
+            <li>What is getDerivedStateFromProps() ?</li>
+            <li>What are PropTypes?</li>
+            <li>Do class setters need to have parameters set in a parenthesis or can it be assigned? obj.property = 'value';</li>
+            <li>What is "ref" ?</li>
+            <li>What is useState() ?</li>
+            <li>What is getSnapshotBeforeUpdate() ?</li>
+            <li>What is code splitting?</li>
+          </ul>
+        </div>
+        <div class='entry_section discoveries'>
+          <h3>Discoveries</h3>
+          <div class='entries'>
+            <div class='entry'>
+              <strong>Topic</strong>
+              <ul>
+                <li><strong>Template literal</strong> is the backtick string.</li>
+                <li><strong>Stateless</strong> is self-explanatory; the component content is props-only.</li>
+                <li><strong>getDerivedStateFromProps()</strong> is a lifecycle-method invoked right before calling the render method. Return an object to update the state, or return null to update nothing. Rarely used.</li>
+                <li><strong>PropTypes</strong> is validation for matching types formatted like: <code>objectProperty: PropTypes.string</code></li>
+                <li><strong>ref</strong> is a way to modify a component without traversing the DOM. Not recommended.</li>
+                <li><strong>useState()</strong> involves <ins>React Hooks</ins>, will be covered later.</li>
+                <li><strong>getSnapshotBeforeUpdate()</strong> is a "commit" phase before any mutations are made. Invoked immediately.</li>
+                <li><strong>Code Splitting</strong> is often featured in npm packs used to lazy-load what is needed at the time for the user. Is a form of performance optimization.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='entry_footnotes'>
+          <p>Questions were inspired by a React skill evaluation.</p>
+        </div>
+      </div>
     </div>
 
     <div>
